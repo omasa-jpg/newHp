@@ -1,27 +1,29 @@
 {
-  "name": "new-project",
+  "name": "quasar-project",
   "version": "0.0.1",
-  "description": "A New Quasar Project",
-  "productName": "New Quasar App",
-  "author": "omasa-jpg <hakataon@gmail.com>",
+  "description": "A Quasar Project",
+  "productName": "Quasar App",
+  "author": "",
   "private": true,
   "scripts": {
+    "lint": "eslint --ext .js,.vue ./",
     "test": "echo \"No test specified\" && exit 0",
     "dev": "quasar dev",
     "build": "quasar build"
   },
   "dependencies": {
     "@quasar/extras": "^1.16.4",
-    "@supabase/supabase-js": "^2.39.0",
-    "dayjs": "^1.11.10",
-    "pinia": "^2.0.11",
     "quasar": "^2.6.0",
-    "supabase": "^1.115.5",
     "vue": "^3.0.0",
-    "vue-router": "^4.2.5",
-    "yarn": "^1.22.21"
+    "vue-router": "^4.0.0"
   },
   "devDependencies": {
+    "eslint": "^8.10.0",
+    "eslint-plugin-vue": "^9.0.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-promise": "^6.0.0",
     "@quasar/app-vite": "^1.3.0",
     "autoprefixer": "^10.4.2",
     "postcss": "^8.4.14"

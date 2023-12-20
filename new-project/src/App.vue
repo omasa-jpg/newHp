@@ -20,6 +20,8 @@
     <q-btn color="primary" label="更新" @click="showUpdateForm" :disable="selected.length !== 1" />
     <!-- 削除ボタン -->
     <q-btn color="black" @click="deleteUser"  label="削除" />
+    <!-- CSV出力ボタン -->
+    <q-btn color="green" label="CSV出力" @click="exportCSV" />
 
   </div>
 
@@ -206,6 +208,49 @@
           console.error('Error updating user:', error.message);
         }
       },
+      // CSV出力
+      async exportCSV() {
+        try {
+          // ユーザーデータを取得
+          const { data, error } = await supabase.from('user').select('*');
+          if (error) {
+            throw error;
+          }
+
+          // CSVデータの作成
+          const csvData = this.formatUsersToCSV(data);
+
+          // CSVデータをBlobに変換
+          const blob = new Blob([csvData], { type: 'text/csv;charset=utf-8;' });
+
+          // BlobをURLに変換
+          const url = URL.createObjectURL(blob);
+
+          // ダウンロードリンクの生成
+          const link = document.createElement('a');
+          link.href = url;
+          link.setAttribute('download', 'users.csv');
+          document.body.appendChild(link);
+
+          // ダウンロードリンクのクリック
+          link.click();
+
+          // ダウンロード後、URLを解放
+          URL.revokeObjectURL(url);
+
+          // ダウンロードリンクを削除
+          document.body.removeChild(link);
+        } catch (error) {
+          console.error('Error exporting CSV:', error.message);
+        }
+      },
+
+      // ユーザーデータをCSV形式にフォーマット
+      formatUsersToCSV(users) {
+        const header = Object.keys(users[0]).join(',') + '\n';
+        const body = users.map(user => Object.values(user).join(',')).join('\n');
+        return header + body;
+      },  
     },
     mounted() {
       // Fetch users & ids when the component is mounted
