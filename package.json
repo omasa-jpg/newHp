@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "quasar": "^2.14.1"
+    "quasar": "^2.14.1",
+    "vue": "^3.4.9"
   }
 }

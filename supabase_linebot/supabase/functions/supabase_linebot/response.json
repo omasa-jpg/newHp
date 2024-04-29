@@ -1,0 +1,24 @@
+{
+    "type": "text",
+    "text": "お気に入りの食べ物のカテゴリを選択してください！",
+    "quickReply": {
+      "items": [
+        {
+          "type": "action",
+          "imageUrl": "https://example.com/sushi.png",
+          "action": {
+            "type": "location",
+            "label": "Location"
+          }
+        },
+        {
+          "type": "action",
+          "imageUrl": "https://example.com/sushi.png",
+          "action": {
+            "type": "camera",
+            "label": "Camera"
+          }
+        }
+      ]
+    }
+  }
