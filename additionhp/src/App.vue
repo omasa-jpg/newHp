@@ -4,7 +4,8 @@
       <v-toolbar-title>会社概要</v-toolbar-title>
       <v-spacer></v-spacer>
       <v-btn text >TOP</v-btn>
-      <v-btn text >サービス</v-btn>
+      <v-btn text >サービスgg
+      </v-btn>
       <v-btn text >会社概要</v-btn>
       <v-btn text >お問い合わせ</v-btn>
     </v-app-bar>
