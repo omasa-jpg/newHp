@@ -1,7 +1,13 @@
 <template>
   <v-app>
-    <v-app-bar class="custom-app-bar" color="orange">
-      <v-toolbar-title>会社概要</v-toolbar-title>
+    <v-app-bar class="custom-app-bar" color="white">
+      <v-img 
+      src="@/assets/addition.png"
+      class="logo-img"
+      ></v-img>
+      <v-toolbar-title
+      class="no-margin"
+      >Addition</v-toolbar-title>
       <v-spacer></v-spacer>
       <v-btn text >TOP</v-btn>
       <v-btn text >サービスgg
@@ -79,7 +85,7 @@
       </v-container>
     </v-main>
 
-    <v-footer color="orange">
+    <v-footer color="white">
       <v-col class="text-center">
         <v-spacer></v-spacer>
         <v-btn text class="custom-btn">TOP</v-btn>
@@ -105,11 +111,34 @@ export default {
   min-height: 100vh;
 }
 
+.logo-container {
+  display: flex;
+  align-items: center;
+  margin-right: 0;
+  padding-right: 0;
+}
+
+.logo-img {
+  width: 0% ;
+  height: 50px;
+  left: 0% ;
+  right: 0%;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.no-margin {
+  margin: 0 !important;
+  padding: 0 !important;
+  display: flex;
+  align-items: center;
+}
+
 .custom-btn {
   color: black !important;  /* ボタンのテキストカラーを黒に設定 */
   background-color: transparent !important;  /* ボタンの背景色を透明に設定 */
   border: none !important;  /* ボタンの枠線を透明に設定 */
-  box-shadow: none !important; /* ボタンの影を削除*/
+  /*box-shadow: none !important;  ボタンの影を削除*/
 }
 
 .signature {
