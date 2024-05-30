@@ -15,33 +15,53 @@
       <v-btn text>お問い合わせ</v-btn>
     </v-app-bar>
 
-    <v-main style="padding: 0; margin: 0;">
-      <v-container fluid>
-        <v-row>
-          <v-col cols="12" class="text-center" style="background-color: orange; color: white;">
-            <h1 style=" font-size: 2rem; font-weight: bold;">ファーストビュー</h1>
+    <v-main style="padding: 0%;">
+      <v-container fluid style="padding: 0; margin: 0;">
+        <v-row style="padding: 0; margin: 0;">
+          <v-col cols="12" class="text-center" style="padding: 0; margin: 0;">
+            <v-img style="
+            padding-left: 10%;
+            margin-top: 0;
+            display: block;" 
+          src="@/assets/fv.png"
+        ></v-img>
           </v-col>
         </v-row>
 
-        <v-row class="my-5">
-          <v-col cols="12">
-            <v-card class="pa-5" style="box-shadow: none;">
-              <v-card-title>会社概要</v-card-title>
+        <v-row class="my-3 justify-center">
+          <v-col cols="12" md="10" style="margin: 0%;">
+            <v-card class="pa-10;">
+              <v-card-title
+              class="text-center"
+              >会社概要
+              </v-card-title>
               <v-card-text>
                 <v-row>
-                  <v-col cols="12" md="6">
-                    <v-card>
+                  <v-col cols="12" md="4">
+                    <v-img 
+                    src="@/assets/logo.png"
+                    style="width: 100%; height: auto;"
+                    ></v-img>
+                  </v-col>
+                  <v-col cols="12" md="8">
+                    <v-card style="box-shadow: none;">
+                      <v-card-text style="font-size: 3rem; font-weight: bold;">
+                        &nbsp;&nbsp;&nbsp;ITをもっと身近に、<br>
+                        &nbsp;&nbsp;&nbsp;人々の生活にもっとITを。<br>
+                      </v-card-text>
                       <v-card-text>
-                        テキストテキストテキストテキストテキスト
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br>
                       </v-card-text>
                     </v-card>
                   </v-col>
-                  <v-col cols="12" md="6">
-                    <v-card>
-                      <v-card-text>
-                        テキストテキストテキストテキストテキスト
-                      </v-card-text>
-                    </v-card>
+                   <v-col cols="12" class="d-flex justify-end">
+                    <v-btn style="background-color: orange;"
+                    text to="/profile">
+                      ボタン
+                    </v-btn>
                   </v-col>
                 </v-row>
               </v-card-text>
@@ -49,23 +69,68 @@
           </v-col>
         </v-row>
 
-        <v-row class="my-5">
-          <v-col cols="12">
-            <v-card class="pa-5" style="box-shadow: none;">
-              <v-card-title>サービス</v-card-title>
+        <v-row class="my-3 justify-center">
+          <v-col cols="12" md="10" style="margin: 0%;">
+            <v-card class="pa-10;">
+              <v-card-title
+              class="text-center"
+              >サービス
+              </v-card-title>
               <v-card-text>
                 <v-row>
-                  <v-col cols="12" md="6">
-                    <v-card>
-                      <v-card-text>
-                        テキストテキストテキストテキストテキスト
+                  <v-col cols="12" md="5">
+                    <v-img 
+                    src="@/assets/plan.png"
+                    style="width: 100%; height: 100%;"
+                    ></v-img>
+                  </v-col>
+                  <v-col cols="12" md="7">
+                    <v-card style="box-shadow: none;">
+                      <v-card-text style="font-size: 2rem; font-weight: bold; text-align: left;">
+                        IT Planners<br>
+                      </v-card-text>
+                      <v-card-text style="text-align: left;">
+                        テキストテキストテキストテキストテキストテキストテキスト<br>
+                        テキストテキストテキストテキストテキストテキストテキスト<br>
+                        テキストテキストテキストテキストテキストテキストテキスト<br>
                       </v-card-text>
                     </v-card>
                   </v-col>
-                  <v-col cols="12" md="6">
-                    <v-card>
+                  
+                  <v-col cols="12" md="7">
+                    <v-card style="box-shadow: none;">
+                      <v-card-text style="font-size: 2rem; font-weight: bold;">
+                        プログラミング教育<br>
+                      </v-card-text>
                       <v-card-text>
-                        テキストテキストテキストテキストテキスト
+                        テキストテキストテキストテキストテキストテキストテキスト<br>
+                        テキストテキストテキストテキストテキストテキストテキスト<br>
+                        テキストテキストテキストテキストテキストテキストテキスト<br>
+                      </v-card-text>
+                    </v-card>
+                  </v-col>
+                  <v-col cols="12" md="5">
+                    <v-img 
+                    src="@/assets/pr.jpg"
+                    style="width: 100%; height: 100%;"
+                    ></v-img>
+                  </v-col>
+
+                  <v-col cols="12" md="5">
+                    <v-img 
+                    src="@/assets/system.jpg"
+                    style="width: 100%; height: 100%;"
+                    ></v-img>
+                  </v-col>
+                  <v-col cols="12" md="7">
+                    <v-card style="box-shadow: none;">
+                      <v-card-text style="font-size: 2rem; font-weight: bold; text-align: left;">
+                        システム構築<br>
+                      </v-card-text>
+                      <v-card-text style="text-align: left;">
+                        テキストテキストテキストテキストテキストテキストテキスト<br>
+                        テキストテキストテキストテキストテキストテキストテキスト<br>
+                        テキストテキストテキストテキストテキストテキストテキスト<br>
                       </v-card-text>
                     </v-card>
                   </v-col>
@@ -77,7 +142,10 @@
 
         <v-row class="my-5">
           <v-col cols="12" class="text-center">
-            <v-btn color="primary">お問い合わせ</v-btn>
+            <v-card-text style="font-size: 1.5rem; font-weight: bold;">
+                お問い合わせ
+              </v-card-text>
+            <v-btn color="primary">ボタン</v-btn>
           </v-col>
         </v-row>
       </v-container>
