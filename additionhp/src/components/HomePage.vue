@@ -6,21 +6,20 @@
           src="@/assets/addition.png"
           style="margin-right: 8px; height: 50px;"
         ></v-img>
-        <v-toolbar-title>Addition</v-toolbar-title>
       </div>
       <v-spacer></v-spacer>
-      <v-btn text to="/">TOP</v-btn>
-      <v-btn text>サービス</v-btn>
-      <v-btn text to="/profile">会社概要</v-btn>
-      <v-btn text>お問い合わせ</v-btn>
+      <v-btn class="custom-btn" text to="/">TOP</v-btn>
+      <v-btn class="custom-btn" text to="/service">サービス</v-btn>
+      <v-btn class="custom-btn" text to="/profile">会社概要</v-btn>
+      <v-btn text href="https://docs.google.com/forms/d/e/1FAIpQLSdTbVbL6-yrmlm9BEDkc540ikCd2AasF7rhFdWFBHtwwVrTSA/viewform" target="_blank">お問い合わせ</v-btn>
     </v-app-bar>
 
-    <v-main style="padding: 0%;">
+    <v-main style="padding: 0%; padding-bottom: 100px;">
       <v-container fluid style="padding: 0; margin: 0;">
         <v-row style="padding: 0; margin: 0;">
           <v-col cols="12" class="text-center" style="padding: 0; margin: 0;">
             <v-img style="
-            padding-left: 10%;
+            padding-left: 0%;
             margin-top: 0;
             display: block;" 
           src="@/assets/fv.png"
@@ -139,29 +138,30 @@
             </v-card>
           </v-col>
         </v-row>
-
-        <v-row class="my-5">
-          <v-col cols="12" class="text-center">
-            <v-card-text style="font-size: 1.5rem; font-weight: bold;">
-                お問い合わせ
-              </v-card-text>
-            <v-btn color="primary">ボタン</v-btn>
-          </v-col>
-        </v-row>
       </v-container>
     </v-main>
-
-    <v-footer color="orange">
-      <v-col class="text-center">
-        <v-btn text class="custom-btn" to="/">TOP</v-btn>
-        <v-btn text class="custom-btn" to="/services">サービス</v-btn>
-        <v-btn text class="custom-btn" to="/company">会社概要</v-btn>
-        <v-btn text class="custom-btn" to="/contact">お問い合わせ</v-btn>
-        <v-row class="justify-center mt-3">
-          <p style="color:white; font-size: 2rem; font-family: 'Roboto',sans-serif;">©︎Addition inc.</p>
+          
+    <v-btn color="primary" 
+      href="https://docs.google.com/forms/d/e/1FAIpQLSdTbVbL6-yrmlm9BEDkc540ikCd2AasF7rhFdWFBHtwwVrTSA/viewform" 
+      target="_blank"
+      class="floating-btn"
+      icon
+      ><v-icon>mdi-email</v-icon>
+    </v-btn>
+          
+    <v-footer>
+      <v-col class="justify-center">
+        <v-row class="justify-center" style="background-color: white;">
+          <v-btn class="custom-btn" text to="/">TOP</v-btn>
+          <v-btn class="custom-btn" text to="/service">サービス</v-btn>
+          <v-btn class="custom-btn" text to="/profile">会社概要</v-btn>
+          <v-btn text href="https://docs.google.com/forms/d/e/1FAIpQLSdTbVbL6-yrmlm9BEDkc540ikCd2AasF7rhFdWFBHtwwVrTSA/viewform" target="_blank">お問い合わせ</v-btn>
         </v-row>
       </v-col>
     </v-footer>
+      <v-footer color="orange" class="justify-center">
+            <p style="color:white; font-family: 'Roboto',sans-serif;">©︎Addition inc.</p>
+      </v-footer>
   </v-app>
 </template>
 
@@ -187,12 +187,41 @@ export default {
   box-shadow: none !important;  /*ボタンの影を削除*/
 }
 
+.v-btn {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.v-btn:active,
+.v-btn:focus,
+.v-btn:hover {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.v-btn:visited {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
 .v-card-title {
   font-size: 1.5rem;
   font-weight: bold;
 }
+
 .v-card-text {
   font-size: 1rem;
+}
+
+.floating-btn {
+  position: fixed;
+  bottom: 60px;
+  right: 30px;
+  background-color: orange;
+  color: white !important;
+  font-weight: bold !important;
+  z-index: 1000;
 }
 
 @media (max-width: 600px) {

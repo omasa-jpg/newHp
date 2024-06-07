@@ -6,16 +6,15 @@
           src="@/assets/addition.png"
           style="margin-right: 8px; height: 50px;"
         ></v-img>
-        <v-toolbar-title>Addition</v-toolbar-title>
       </div>
       <v-spacer></v-spacer>
-      <v-btn text to="/">TOP</v-btn>
-      <v-btn text>サービス</v-btn>
-      <v-btn text>会社概要</v-btn>
-      <v-btn text>お問い合わせ</v-btn>
+      <v-btn class="custom-btn" text to="/">TOP</v-btn>
+      <v-btn class="custom-btn" text to="/service">サービス</v-btn>
+      <v-btn class="custom-btn" text to="/profile">会社概要</v-btn>
+      <v-btn class="custom-btn" text href="https://docs.google.com/forms/d/e/1FAIpQLSdTbVbL6-yrmlm9BEDkc540ikCd2AasF7rhFdWFBHtwwVrTSA/viewform" target="_blank">お問い合わせ</v-btn>
     </v-app-bar>
 
-    <v-main>
+    <v-main style="padding-bottom: 100px;">
       <v-container class="mt-5">
         <v-row>
           <v-col cols="12" class="text-center" style="background-color: orange; color: white;">
@@ -92,18 +91,19 @@
       </v-container>
     </v-main>
 
-    <v-footer color="orange">
-      <v-col class="text-center">
-        <v-spacer></v-spacer>
-        <v-btn text class="custom-btn">TOP</v-btn>
-        <v-btn text class="custom-btn">サービス</v-btn>
-        <v-btn text class="custom-btn">会社概要</v-btn>
-        <v-btn text class="custom-btn">お問い合わせ</v-btn>
-        <v-row class="justify-center mt-3">
-          <p style="color:white; font-size: 2rem; font-family: 'Roboto',sans-serif;">©︎Addition inc.</p>
+    <v-footer>
+      <v-col class="justify-center">
+        <v-row class="justify-center" style="background-color: white;">
+          <v-btn text class="custom-btn" to="/">TOP</v-btn>
+          <v-btn text class="custom-btn" to="/service">サービス</v-btn>
+          <v-btn text class="custom-btn" to="/profile">会社概要</v-btn>
+          <v-btn text class="custom-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSdTbVbL6-yrmlm9BEDkc540ikCd2AasF7rhFdWFBHtwwVrTSA/viewform" target="_blank">お問い合わせ</v-btn>
         </v-row>
       </v-col>
     </v-footer>
+      <v-footer color="orange" class="justify-center">
+            <p style="color:white; font-family: 'Roboto',sans-serif;">©︎Addition inc.</p>
+      </v-footer>
   </v-app>
 </template>
 
@@ -127,7 +127,25 @@ export default {
   color: black !important;  /* ボタンのカラーを黒に設定 */
   background-color: transparent !important;  /* ボタンの背景色を透明に設定 */
   border: none !important;  /* ボタンの枠線を透明に設定 */
-  box-shadow: none;  /*ボタンの影を削除*/
+  box-shadow: none !important;  /*ボタンの影を削除*/
+}
+
+.v-btn {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.v-btn:active,
+.v-btn:focus,
+.v-btn:hover {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.v-btn:visited {
+  background-color: transparent !important;
+  box-shadow: none !important;
 }
 
 .signature {
