@@ -18,39 +18,41 @@
       <v-container fluid style="padding: 0; margin: 0;">
             <v-img style="
             width: 100%;"
-          src="@/assets/Addition_serviceTOP.jpg"
-          ></v-img>     
+            src="@/assets/Addition_service.jpg"
+            ></v-img>     
   
-        <v-row style="margin-right: 0; padding-left: 100px; padding-right: 100px; padding-top: 100px;" >
-          <v-col cols="12" style="margin: 0% auto;">
-            <v-card class="pa-10;" style="margin-top: 0; box-shadow: none;">
-              <v-card-text>
-                <v-row>
-                  <v-col cols="12" md="6" style="padding-bottom: 40px; padding-top: 40px;">
-                    <v-img 
-                    src="@/assets/IT_m.jpg"
-                    style="width: 100%; height: 100%; "
-                    ></v-img>
-                  </v-col>
-                  <v-col cols="12" md="6" style="display: flex; flex-direction: column; justify-content: flex-end; margin-bottom: 35px;">
-                    <v-card style="box-shadow: none;">
-                      <v-card-text style="font-size: 2rem; font-weight: bold; text-align: left;">
-                        IT Planners<br>
-                      </v-card-text>
-                      <v-card-text style="text-align: left;">
+            <v-row style="margin-right: 0; padding-left: 100px; padding-right: 100px; padding-top: 100px;" >
+              <v-col cols="12" style="margin: 0% auto;">
+                <v-card class="pa-10;" style="margin-top: 0; box-shadow: none;">
+                  <v-card-text>
+                    <v-row>
+                      <v-col cols="12" md="6" style="padding-bottom: 40px; padding-top: 40px;">
+                        <v-img 
+                        src="@/assets/IT_m.jpg"
+                        style="width: 100%; height: 100%; "
+                        ></v-img>
+                      </v-col>
+                      <v-col cols="12" md="6" style="display: flex; flex-direction: column; justify-content: flex-end; margin-bottom: 35px;">
+                        <v-card style="box-shadow: none;">
+                          <v-card-text style="font-size: 2rem; font-weight: bold; text-align: left; margin-top: 40px; position: relative; display: inline-block;">
+                            IT Planners<br>
+                            <span style="position: absolute; left: 15px; bottom: 20px; height: 2px; width: 265%; background-color: black;"></span>
+                          </v-card-text>
+                          <v-card-text style="text-align: left;">
                         DX推進や業務効率化などビジネスにおける課題解決に向けた 技術的知見、<br>
                         開発リソースを月3万円〜で提供します。
                       </v-card-text>
                     </v-card>
                     <div style="margin-top: auto; text-align: right; width: 100%;">
-                      <v-btn to="/pr" style="background-color: #F1684D; font-size: 1rem; font-weight: bold;">詳しくはこちらから＞＞＞</v-btn>
+                      <v-btn to="/pr" style="background-color: #F1684D!important; font-size: 1rem; font-weight: bold; color: black; height: 50px; padding: 10px;">詳しくはこちらから＞＞</v-btn>
                     </div>
                   </v-col>
                   
                   <v-col cols="12" md="6" style=" padding-top: 40px; padding-bottom: 40px;">
                     <v-card style="box-shadow: none; text-align: left;">
-                      <v-card-text style="font-size: 2rem; font-weight: bold;">
+                      <v-card-text style="font-size: 2rem; font-weight: bold; margin-top: 40px; position: relative; display: inline-block;">
                         プログラミング教育<br>
+                        <span style="position: absolute; left: 15px; bottom: 20px; height: 2px; width: 165%; background-color: black;"></span>
                       </v-card-text>
                       <v-card-text style="text-align: left;">
                         一定のレベルまでプログラムレベルを引き上げながら、報酬を受け取れる<br>
@@ -73,8 +75,9 @@
                   </v-col>
                   <v-col cols="12" md="6" style=" padding-top: 40px; padding-bottom: 40px;">
                     <v-card style="box-shadow: none;">
-                      <v-card-text style="font-size: 2rem; font-weight: bold; text-align: left;">
+                      <v-card-text style="font-size: 2rem; font-weight: bold; text-align: left; margin-top: 40px; position: relative; display: inline-block;">
                         システム構築<br>
+                        <span style="position: absolute; left: 15px; bottom: 20px; height: 2px; width: 255%; background-color: black;"></span>
                       </v-card-text>
                       <v-card-text style="text-align: left;">
                         サービス開発、アプリ開発、LINEbot開発、HP/LP制作などリクエストに応じた<br>
@@ -126,29 +129,6 @@ export default {
   box-shadow: none !important;  /*ボタンの影を削除*/
 }
 
-/* クリック時の背景色を無効化 */
-.custom-btn:hover,
-.custom-btn:focus,
-.custom-btn:active
-.custom-btn.v-btn--active,
-.custom-btn.v-btn:focus,
-.custom-btn.v-btn:active,
-.custom-btn.v-btn:hover {
-  background-color: transparent !important;  /* クリック時やホバー時の背景色を透明に設定 */
-}
-
-.v-btn {
-  background-color: transparent !important;  /* ボタンの背景色を透明に設定 */
-}
-
-.v-btn:active,
-.v-btn:hover,
-.v-btn:focus,
-.v-btn:before,
-.v-btn:after {
-  background-color: transparent !important;  /* クリック時やホバー時の背景色を透明に設定 */
-  box-shadow: none !important; /* クリック時やホバー時の影を削除 */
-}
 
 @media (max-width: 600px) {
 .custom-img {
