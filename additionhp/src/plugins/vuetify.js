@@ -6,7 +6,8 @@ import 'vuetify/styles'
 import { createVuetify } from 'vuetify'
 
 export default createVuetify({
-  breakpoint: {
+  display: {
+    mobileBreakpoint: 'xs',
     thresholds: {
       xs: 600,
       sm: 960,

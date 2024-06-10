@@ -69,26 +69,68 @@
             </v-card>
           </v-col>
 
-          <v-col cols="12" class="mt-5" style="text-align: center;">
-            <v-card style="box-shadow: none;">
-              <v-card-title>会社概要</v-card-title>
+          
+        </v-row>
+        <v-row>
+          <v-col cols="12">
+            <v-card flat>
+              <v-card-title style="text-align: center;">会社概要</v-card-title>
               <v-card-text>
-                <div class="company-info">
-                  <p><strong>会社名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;：&nbsp;&nbsp;</strong>合同会社addition</p>
-                  <p><strong>所在地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;：&nbsp;&nbsp;</strong>滋賀県守山市吉身6丁目4-46 シャトーロワール102</p>
-                  <p><strong>設立&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;：&nbsp;&nbsp;</strong>2023年3月</p>
-                  <p><strong>取締役&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;：&nbsp;&nbsp;</strong>西島伸樹</p>
-                  <p><strong>事業内容&nbsp;&nbsp;：&nbsp;&nbsp;</strong>(1)コンピュータのソフトウェア及びハードウェアの企画、研究、開発、設計、製造、販
-売、保守、リース、賃貸及び輸出入並びにそれらに関するコンサルティング業務
-(2)情報の収集、分析、管理及び処理サービス業、情報提供サービス業並びに情報処理に
-関する研究開発</p>
-                </div>
+                <v-row>
+                  <v-col cols="4">
+                    <strong>会社名</strong>
+                  </v-col>
+                  <v-col cols="8">
+                    合同会社addition
+                  </v-col>
+                </v-row>
+                <v-divider></v-divider>
+                <v-row>
+                  <v-col cols="4">
+                    <strong>所在地</strong>
+                  </v-col>
+                  <v-col cols="8">
+                    滋賀県守山市吉身6丁目4-46 シャトーロワール102
+                  </v-col>
+                </v-row>
+                <v-divider></v-divider>
+                <v-row>
+                  <v-col cols="4">
+                    <strong>設立</strong>
+                  </v-col>
+                  <v-col cols="8">
+                    2023年3月
+                  </v-col>
+                </v-row>
+                <v-divider></v-divider>
+                <v-row>
+                  <v-col cols="4">
+                    <strong>取締役</strong>
+                  </v-col>
+                  <v-col cols="8">
+                    西島伸樹
+                  </v-col>
+                </v-row>
+                <v-divider></v-divider>
+                <v-row>
+                  <v-col cols="4">
+                    <strong>事業内容</strong>
+                  </v-col>
+                  <v-col cols="8">
+                    (1)コンピュータのソフトウェア及びハードウェアの企画、研究、開発、設計、製造、販
+                    売、保守、リース、賃貸及び輸出入並びにそれらに関するコンサルティング業務<br>
+                    (2)情報の収集、分析、管理及び処理サービス業、情報提供サービス業並びに情報処理に
+                    関する研究開発
+                  </v-col>
+                </v-row>
               </v-card-text>
             </v-card>
           </v-col>
         </v-row>
       </v-container>
     </v-main>
+
+
 
     <v-footer>
       <v-col class="justify-center">
@@ -171,13 +213,6 @@ font-size: 1rem;
 .company-info p {
   margin: 0;
   margin-bottom: 10px;
-}
-
-@media (max-width: 600px) {
-.custom-img {
-height: auto; /* スマホ画面では画像の高さを自動調整 */
-width: 100%; /* 画像を全幅に調整 */
-}
 }
 
 .golden-ratio-img {

@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-app-bar class="custom-app-bar" color="white">
-      <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
       <div style="display: flex; align-items: center; flex-grow: 0.2;">
         <v-img 
           src="@/assets/addition.png"
@@ -19,6 +19,7 @@
         v-model="drawer"
         fixed
         temporary
+        @click:close="drawerClose"
       >
         <v-list
           nav
@@ -55,8 +56,8 @@
                   padding-left: 0%;
                   margin-top: 0;
                   display: block;" 
-                src="@/assets/fv.png"
-              ></v-img>
+                  src="@/assets/fv.png"
+                ></v-img>
                 </v-col>
         </v-row>
 
@@ -69,15 +70,15 @@
               </v-card-title>
               <v-card-text>
                 <v-row>
-                  <v-col cols="12" md="4">
+                  <v-col cols="12" sm="4" md="4" lg="4" xl="4" xs="12">
                     <v-img 
                     src="@/assets/logo.png"
                     style="width: 100%; height: auto;"
                     ></v-img>
                   </v-col>
-                  <v-col cols="12" md="8">
-                    <v-card style="box-shadow: none;">
-                      <v-card-text style="font-size: 3rem; font-weight: bold;">
+                  <v-col cols="12" sm="8" md="8" lg="8" xl="8">
+                    <v-card style="box-shadow: none;" >
+                      <v-card-text style="font-size: breaksize1;">
                         &nbsp;&nbsp;&nbsp;ITをもっと身近に、<br>
                         &nbsp;&nbsp;&nbsp;人々の生活にもっとITを。<br>
                       </v-card-text>
@@ -89,8 +90,8 @@
                       </v-card-text>
                     </v-card>
                   </v-col>
-                   <v-col cols="12" class="d-flex justify-end">
-                    <v-btn style="background-color: orange;"
+                   <v-col cols="12" class="d-flex justify-end" xs="0">
+                    <v-btn style="background-color: orange!important;"
                     text to="/profile">
                       ボタン
                     </v-btn>
@@ -124,7 +125,7 @@
                       </v-card-text>
                     </v-card>
                     <div style="margin-top: auto; text-align: right; width: 100%;">
-                      <v-btn to="/pr" style="background-color: #F1684D; font-size: 1rem; font-weight: bold; color: black; padding: 0%;">詳しくはこちらから＞＞</v-btn>
+                      <v-btn to="/pr" style="background-color: #F1684D!important; font-size: 1rem; font-weight: bold; color: black; padding: 0%;">詳しくはこちらから＞＞</v-btn>
                     </div>
                   </v-col>
                   
@@ -177,7 +178,7 @@
       target="_blank"
       class="floating-btn"
       icon
-      ><v-icon>mdi-email</v-icon>
+      ><v-icon left>mdi-email</v-icon>
     </v-btn>
           
     <v-footer>
@@ -198,7 +199,36 @@
 
 <script>
 export default {
+  computed:{
+    breaksize1(){
+      switch(this.$vuetify.breakpoint.name){
+        case 'xs': return 3
+        case 'sm': return 32
+        case 'md': return 48
+        case 'lg': return 56
+        case 'xl': return 80
+      }
+    },
+  },
+
+data(){
+  return{
+  drawer: false,
   name: 'HomePage'
+}
+},
+watch:{
+  group(){
+    this.drawer = false
+},
+},
+methods:{
+  //メソッドを記述
+  drawerClose(){
+    this.drawer = false
+}
+}
+
 }
 </script>
 
@@ -211,8 +241,8 @@ export default {
   min-height: 100vh;
 }
 
-.custom-btn {
-  color: black !important;  /* ボタンのカラーを黒に設定 */
+.custom-btn {  
+  color: black !important; /* ボタンのカラーを黒に設定 */
   background-color: transparent !important;  /* ボタンの背景色を透明に設定 */
   border: none !important;  /* ボタンの枠線を透明に設定 */
   box-shadow: none !important;  /*ボタンの影を削除*/
@@ -232,15 +262,15 @@ export default {
   bottom: 60px;
   right: 30px;
   background-color: orange;
-  color: white !important;
   font-weight: bold !important;
-  z-index: 1000;
+  z-index: 1000;	
+align-items: center;	
+font-size: 1.25rem;
+border-radius: 10px;
+}	
+.floating-btn v-icon {	
+margin-right: 10px;
+/*font-size: 1.5rem;  アイコンのサイズを大きくする */
 }
 
-@media (max-width: 600px) {
-.custom-img {
-  height: auto; /* スマホ画面では画像の高さを自動調整 */
-  width: 100%; /* 画像を全幅に調整 */
-}
-}
 </style>

@@ -129,11 +129,4 @@ export default {
   box-shadow: none !important;  /*ボタンの影を削除*/
 }
 
-
-@media (max-width: 600px) {
-.custom-img {
-  height: auto; /* スマホ画面では画像の高さを自動調整 */
-  width: 100%; /* 画像を全幅に調整 */
-}
-}
 </style>
