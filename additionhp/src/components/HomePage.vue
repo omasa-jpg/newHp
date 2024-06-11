@@ -91,7 +91,7 @@
                     </v-card>
                   </v-col>
                    <v-col cols="12" class="d-flex justify-end" xs="0">
-                    <v-btn style="background-color: orange!important;"
+                    <v-btn v-if="!$vuetify.breakpoint.xs" style="background-color: orange!important;"
                     text to="/profile">
                       ボタン
                     </v-btn>
@@ -108,7 +108,7 @@
                 <v-card-title class="text-center">サービス</v-card-title>
                   <v-card-text>
                     <v-row>
-                        <v-col class="position-change1" cols="12" md="6" style="padding-bottom: 40px; padding-top: 40px;">
+                        <v-col class="position-change1 padding-botom0" cols="12" md="6" style="padding-bottom: 40px; padding-top: 40px;">
                           <v-img 
                           src="@/assets/IT_m.jpg"
                           style="width: 100%; height: 100%; "
@@ -116,7 +116,7 @@
                         </v-col>
                       <v-col class="position-change2" cols="12" md="6" style="display: flex; flex-direction: column; justify-content: flex-end; margin-bottom: 35px;">
                           <v-card style="box-shadow: none;">
-                            <v-card-text class="text-sm-left text-center" style="font-size: 2rem; font-weight: bold; text-align: left; margin-top: 40px; text-decoration: underline;">
+                            <v-card-text class="text-sm-left text-center margin-top0 text-rem" style="font-size: 2rem; font-weight: bold; text-align: left; margin-top: 40px; text-decoration: underline;">
                               IT Planners<br>
                             </v-card-text>
                             <v-card-text style="text-align: left;">
@@ -124,14 +124,20 @@
                               開発リソースを月3万円〜で提供します。
                             </v-card-text>
                           </v-card>
-                          <div style="margin-top: auto; text-align: right; width: 100%;">
-                            <v-btn to="/pr" style="background-color: #F1684D!important; font-size: 1rem; font-weight: bold; color: black; padding: 0%;">詳しくはこちらから＞＞</v-btn>
+                          <div class="text-aligncenter" style="margin-top: auto; text-align: right; width: 100%;">
+                            <v-btn to="/pr" 
+                            style="background-color: #F1684D!important; 
+                            font-size: 1rem; 
+                            font-weight: bold; 
+                            color: black; 
+                            padding: 0%;"
+                            >詳しくはこちらから＞＞</v-btn>
                           </div>
                       </v-col>
                     
-                    <v-col class="position-change4" cols="12" md="6" style=" padding-top: 40px; padding-bottom: 40px;">
+                    <v-col class="position-change4 padding-top12px" cols="12" md="6" style=" padding-top: 40px; padding-bottom: 40px;">
                       <v-card style="box-shadow: none; text-align: left;">
-                        <v-card-text class="text-sm-left text-center" style="font-size: 2rem; font-weight: bold; margin-top: 40px">
+                        <v-card-text class="text-sm-left text-center margin-top0 text-rem" style="font-size: 2rem; font-weight: bold; margin-top: 40px">
                           プログラミング教育<br>
                         </v-card-text>
                         <v-card-text style="text-align: left;">
@@ -140,22 +146,22 @@
                         </v-card-text>
                       </v-card>
                     </v-col>
-                    <v-col class="position-change3" cols="12" md="6" style=" padding-top: 40px; padding-bottom: 40px; padding-left: 30px;">
+                    <v-col class="position-change3 padding-botom0" cols="12" md="6" style=" padding-top: 40px; padding-bottom: 40px; padding-left: 30px;">
                       <v-img 
                       src="@/assets/programing_m.jpg"
                       style="width: 100%; height: 100%;"
                       ></v-img>
                     </v-col>
 
-                    <v-col class="position-change5" cols="12" md="6" style="padding-top: 40px; padding-bottom: 40px;">
+                    <v-col class="position-change5 padding-botom0" cols="12" md="6" style="padding-top: 40px; padding-bottom: 40px;">
                       <v-img 
                       src="@/assets/system_m.jpg"
                       style="width: 100%; height: 100%; "
                       ></v-img>
                     </v-col>
-                    <v-col class="position-change6" cols="12" md="6" style=" padding-top: 40px; padding-bottom: 40px;">
+                    <v-col class="position-change6 padding-top12px" cols="12" md="6" style=" padding-top: 40px; padding-bottom: 40px;">
                       <v-card style="box-shadow: none;">
-                        <v-card-text class="text-sm-left text-center" style="font-size: 2rem; font-weight: bold; text-align: left; margin-top: 40px">
+                        <v-card-text class="text-sm-left text-center margin-top0 text-rem" style="font-size: 2rem; font-weight: bold; text-align: left; margin-top: 40px">
                           システム構築<br>
                         </v-card-text>
                         <v-card-text style="text-align: left;">
@@ -283,6 +289,21 @@ margin-right: 10px;
   }
   .position-change6{
     order: 6 !important;
+  }
+  .margin-top0{
+    margin-top: 0 !important;
+  }
+  .padding-botom0{
+    padding-bottom: 0 !important;
+  }
+  .text-aligncenter{
+    text-align: center !important;
+  }
+  .padding-top12px{
+    padding-top: 12px !important;
+  }
+  .text-rem{
+    font-size: 1.5rem !important;
   }
 }
 </style>
